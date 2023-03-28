@@ -1,10 +1,11 @@
 import React from "react";
+import SkillsBox, { Skills, SkillsBoxProps } from "./SkillsBox";
 
 interface CardAgentsProps {
   image: string;
   name: string;
   country: string;
-  skills: string[];
+  skills: Skills[];
   bgImage: string;
   gradient: string;
 }
@@ -36,6 +37,9 @@ export default function CardAgents({
       </div>
       <div className="h-full w-full">
         <img className="w-full flex h-full" src={image} alt="agent" />
+      </div>
+      <div>
+        <SkillsBox skills={skills} />
       </div>
     </div>
   );

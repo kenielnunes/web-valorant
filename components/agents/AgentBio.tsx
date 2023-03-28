@@ -3,11 +3,13 @@ import localFont from "next/font/local";
 import React from "react";
 
 interface Bio {
-  classAgent: string;
-  bio: string;
+  classAgent?: string;
+  bio?: string;
 }
 
-export const DINNextW1G = localFont({ src: '../../public/util/DINNextW1G-Bold.ttf' })
+export const DINNextW1G = localFont({
+  src: "../../public/util/DINNextW1G-Bold.ttf",
+});
 
 export default function AgentBio({ classAgent, bio }: Bio) {
   return (
@@ -18,9 +20,7 @@ export default function AgentBio({ classAgent, bio }: Bio) {
       </div>
       <div>
         <div className="text-[26px]">// BIOGRAFIA</div>
-        <div className="text-lg font-bold" >
-          {bio}
-        </div>
+        <div className="text-lg font-bold">{bio}</div>
       </div>
     </div>
   );
