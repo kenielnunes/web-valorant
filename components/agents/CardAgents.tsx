@@ -27,11 +27,11 @@ export default function CardAgents({
         backgroundRepeat: "no-repeat",
         backgroundColor: "#333333",
       }}
-      className="h-[400px] rounded-tl-xl border border-black w-full  relative"
+      className="h-[400px] rounded-tl-xl border border-black w-[90%]  relative"
     >
       <div
-        style={{ WebkitTextStroke: "1px #fff" }}
-        className="absolute cursor-default -left-36 font-black w-full text-transparent top-28 text-8xl rotate-90"
+        style={{ WebkitTextStroke: "2px #fff" }}
+        className="absolute cursor-default -left-48 font-black w-full text-transparent top-48 text-8xl rotate-90"
       >
         {name}
       </div>

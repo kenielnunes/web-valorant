@@ -81,7 +81,7 @@ export default function App() {
         backgroundSize: "auto",
         backgroundRepeat: "no-repeat",
       }}
-      className="relative  w-screen  h-screen text-white"
+      className="relative w-screen bg-vavaRed h-screen "
     >
       {/* <div
         onMouseMove={handleMouseMove}
@@ -97,7 +97,7 @@ export default function App() {
         />
       </video> */}
       <Container>
-        <div className="flex  flex-col xl:flex-row  w-full items-center">
+        <div className="flex  flex-col xl:flex-row h-full w-full items-center">
           {/* <div
             onMouseMove={handleMouseMove}
             onMouseEnter={handleMouseEnter}
@@ -107,7 +107,18 @@ export default function App() {
           <div className="w-full">
             <Carousel>
               {agentsData.map((agent: Agent) => {
-                return <>{agent.displayName}</>;
+                return (
+                  <div className="flex items-center justify-center">
+                    <CardAgents
+                      image={agent.fullPortrait}
+                      name={agent.displayName}
+                      country={"Country"}
+                      skills={[]}
+                      bgImage={agent.background}
+                      gradient={""}
+                    />
+                  </div>
+                );
               })}
             </Carousel>
           </div>
