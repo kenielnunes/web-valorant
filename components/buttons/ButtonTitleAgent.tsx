@@ -9,7 +9,7 @@ export function ButtonTitleAgent({ children, ...rest }: ButtonTitle) {
   return (
     <button
       {...rest}
-      className={`text-[90px] lg:text-[120px] w-full leading-[103px] text-left duration-300 hover:translate-x-4 focus:text-vavaRed`}
+      className={`text-[90px] lg:text-[120px] text-center md:text-left w-full leading-[103px] duration-300 md:hover:translate-x-4 focus:text-vavaRed`}
     >
       {children}
     </button>

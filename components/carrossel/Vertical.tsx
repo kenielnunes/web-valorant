@@ -7,13 +7,28 @@ interface CarouselProps {
   vertical?: boolean;
 }
 
-export default function Carousel({ children, vertical }: CarouselProps) {
+export default function Carousel({ children }: CarouselProps) {
   const settings = {
-    dots: true,
-    infinite: true,
+    dots: false,
+    vertical: true,
     speed: 500,
-    slidesToShow: 3,
+    verticalSwiping: true,
+    arrows: false,
+    slidesToShow: 4,
     slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 325,
+        settings: {
+          slidesToShow: 1,
+          vertical: false,
+          verticalSwiping: false,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true,
+        },
+      },
+    ],
   };
   return <Slider {...settings}>{children}</Slider>;
 }

@@ -13,14 +13,14 @@ export const DINNextW1G = localFont({
 
 export default function AgentBio({ classAgent, bio }: Bio) {
   return (
-    <div className={`${DINNextW1G.className} flex flex-col text-left gap-6`}>
+    <div className={`${DINNextW1G.className}  flex flex-col text-left gap-6`}>
       <div className="flex flex-col ">
         <div className="text-[26px]">// FUNÇÃO</div>
-        <div className="text-[60px]">{classAgent}</div>
+        <div className="text-[60px] bioAgent">{classAgent}</div>
       </div>
       <div>
         <div className="text-[26px]">// BIOGRAFIA</div>
-        <div className="text-lg font-bold">{bio}</div>
+        <div className="text-lg font-bold bioAgent">{bio}</div>
       </div>
     </div>
   );

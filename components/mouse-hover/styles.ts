@@ -6,8 +6,7 @@ interface ImageProps {
 }
 
 export const SvgArrow = styled.img<ImageProps>`
-  animation: ${Bounce} 1s infinite;
-  transform: ${(props) => props.rotate && "rotate(180deg)"};
+  /* transform: ${(props) => props.rotate && "rotate(180deg)"}; */
   animation: 0.6s ease-in-out both infinite alternate;
 `;
 export const Heptagon = styled.div`

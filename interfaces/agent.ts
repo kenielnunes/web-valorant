@@ -24,12 +24,14 @@ export interface Agent {
     displayIcon: string;
     assetPath: string;
   };
-  abilities: {
-    slot: string;
-    displayName: string;
-    description: string;
-    displayIcon: string;
-  };
+  abilities: [
+    {
+      slot: string;
+      displayName: string;
+      description: string;
+      displayIcon: string;
+    }
+  ];
   voiceLine: {
     minDuration: number;
     maxDuration: number;

@@ -8,6 +8,7 @@ interface CardAgentsProps {
   skills: Skills[];
   bgImage: string;
   gradient: string;
+  onClick?: () => void;
 }
 
 export default function CardAgents({
@@ -17,21 +18,23 @@ export default function CardAgents({
   gradient,
   country,
   skills,
+  onClick,
 }: CardAgentsProps) {
   return (
     <div
+      onClick={onClick}
       style={{
-        backgroundImage: `url("${bgImage}")`,
+        // backgroundImage: `url("${bgImage}")`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        backgroundColor: "#333333",
+        // backgroundColor: "#333333",
       }}
-      className="h-[400px] rounded-tl-xl border border-black w-[90%]  relative"
+      className="rounded-tl-xl  border-black w-[85%] h-[50vh] relative"
     >
       <div
         style={{ WebkitTextStroke: "2px #fff" }}
-        className="absolute cursor-default -left-48 font-black w-full text-transparent top-48 text-8xl rotate-90"
+        className="absolute cursor-default -left-64 font-black w-full text-transparent top-60 text-8xl rotate-90"
       >
         {name}
       </div>
