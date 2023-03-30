@@ -8,7 +8,7 @@ interface Bio {
 }
 
 export const DINNextW1G = localFont({
-  src: "../../public/util/DINNextW1G-Bold.ttf",
+  src: "../../app/fonts/DINNextW1G-Bold.ttf",
 });
 
 export default function AgentBio({ classAgent, bio }: Bio) {

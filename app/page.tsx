@@ -100,21 +100,10 @@ export default function App() {
     );
   };
 
-  // gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-  // let smoother = ScrollSmoother.create({
-  //   content: "#content",
-  //   smooth: 3,
-  //   effects: true,
-  // });
-
-  // smoother.effects("img", { speed: "auto" });
-
-  // useEffect(() => {
-  //   AnimationFade(".agentImage");
-  //   AnimationBottomToTopFade(".bioAgent");
-  // }, [activeAgent]);
-
-  // ScrollReveal().reveal(".1", { delay: 500, reset: true });
+  useEffect(() => {
+    AnimationFade(".agentImage");
+    AnimationBottomToTopFade(".bioAgent");
+  }, [activeAgent]);
 
   return (
     <div
