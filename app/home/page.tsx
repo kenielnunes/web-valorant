@@ -119,7 +119,7 @@ export default function App() {
   return (
     <div
       id="content"
-      className="relative w-screen h-screen bg-vavaRed overflow-hidden xl:overflow-auto bg-opacity-30 items-center justify-center"
+      className="relative w-screen h-screen bg-vavaRed overflow-x-hidden xl:overflow-auto bg-opacity-30 items-center justify-center"
     >
       <FollowMouse />
 

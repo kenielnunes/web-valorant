@@ -4,6 +4,7 @@ export const metadata = {
 };
 import localFont from "next/font/local";
 import "../global.css";
+import Navbar from "@/components/navigation/Navbar";
 export const TungstenBold = localFont({
   src: "../public/util/Tungsten-Bold.ttf",
 });
@@ -22,8 +23,9 @@ export default function RootLayout({
           backgroundSize: "auto",
           backgroundRepeat: "no-repeat",
         }}
-        className={`${TungstenBold.className} h-full `}
+        className={`${TungstenBold.className} h-full overflow-x-hidden`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
