@@ -54,7 +54,7 @@ export default function App() {
         style={{
           position: "absolute",
           left: mouseCoords.x - 48,
-          top: mouseCoords.y - 48,
+          top: mouseCoords.y - 40,
         }}
       >
         {isMouseOverParent && (
@@ -121,17 +121,20 @@ export default function App() {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <Carousel>
-                {agentsData.map((agent: Agent) => {
-                  return (
-                    <ButtonTitleAgent
-                      onClick={() => setAgent(agent.displayName)}
-                    >
-                      {agent.displayName}
-                    </ButtonTitleAgent>
-                  );
-                })}
-              </Carousel>
+              <div className="w-full h-full">
+                <Carousel>
+                  {agentsData.map((agent: Agent) => {
+                    return (
+                      <ButtonTitleAgent
+                        onClick={() => setAgent(agent.displayName)}
+                      >
+                        {agent.displayName}
+                      </ButtonTitleAgent>
+                    );
+                  })}
+                </Carousel>
+              </div>
+
               <div className="w-full xl:w-3/4 2xl:w-1/2 sm:left-32 pointer-events-none sm:translate-y-[-80%] lg:translate-y-[-70%] xl:translate-y-[-50%] top-[50%] 2xl:left-80 md:absolute">
                 <img
                   className="agentImage"
