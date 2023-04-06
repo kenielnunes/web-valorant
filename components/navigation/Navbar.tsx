@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <div className="grid grid-cols-12 bg-vavaBlack text-white py-4">
+    <div className="grid grid-cols-12 fixed w-full z-40 bg-vavaBlack text-white py-4">
       <div>
         <img src="" alt="icon" />
       </div>
@@ -49,10 +49,15 @@ const Navbar: React.FC = () => {
           );
         })}
       </ul>
+      <div>
+        <button onClick={() => setIsOpen(true)}>open</button>
+      </div>
       <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
-        <div>oi 1</div>
-        <div>oi 1</div>
-        <div>oi 1</div>
+        <div className="text-black">
+          <div>oi 1</div>
+          <div>oi 1</div>
+          <div>oi 1</div>
+        </div>
       </Drawer>
     </div>
   );
